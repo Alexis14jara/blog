@@ -497,6 +497,10 @@ main {
 
 .about .article-title { margin-bottom: 15px; }
 
+#linktienda {
+  color: #FFDB70;
+}
+
 .about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
