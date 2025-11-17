@@ -160,6 +160,9 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 function formEnviado() {
-    // Cambiá esto por un modal o animación si querés
+    // Mostrar alerta personalizada
     alert("¡Mensaje enviado correctamente!");
+
+    // Resetear formulario
+    document.getElementById("miFormulario").reset();
 }
