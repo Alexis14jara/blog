@@ -906,8 +906,8 @@
         <section class="contact-form">
 
           <h3 class="h3 form-title">Formulario</h3>
-
-          <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
+          <iframe name="hiddenFrame" style="display:none;"></iframe>
+          <form action="https://api.web3forms.com/submit" method="POST" target="hiddenFrame" onsubmit="formEnviado();" class="form" data-form>
 
             <input type="hidden" name="access_key" value="eb87d0e8-b9d2-4c97-af34-1dc884ce936c">
 
