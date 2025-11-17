@@ -159,10 +159,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-function formEnviado() {
-    // Mostrar alerta personalizada
-    alert("¡Mensaje enviado correctamente!");
+// Detecta cuando el iframe termina de recibir la respuesta de la API
+document.getElementById("hiddenFrame").onload = function () {
 
-    // Resetear formulario
+    // Mostrar alerta elegante
+    alert("¡Formulario enviado con éxito! Nos pondremos en contacto contigo pronto.");
+
+    // Resetear el formulario
     document.getElementById("miFormulario").reset();
-}
+
+    // Desactivar botón otra vez
+    const btn = document.querySelector("[data-form-btn]");
+    btn.disabled = true;
+};
