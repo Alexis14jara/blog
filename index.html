@@ -2,974 +2,508 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NovinhoDev</title>
-  <meta name="description" content="Sitio oficial de NovinhoDev, desarrollador web Front-End especializado en HTML, CSS, JavaScript, Python y Dart.">
-
-  <!-- 
-    - Verificación de Google Search Console 
-  -->
-  <meta name="google-site-verification" content="LFKiBh1LxctQ1JR2hTV84QY0BxwdMm5UZnFc0JVfu2U" />
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/novinhodev.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovinhoDev | Creative Developer</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+    <div class="noise-overlay"></div>
 
-  <main>
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                Novinho<span class="logo-dev">Dev</span><span class="logo-guion">_</span>
+            </a>
 
-    <!--
-      - #SIDEBAR
-    -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#about">Sobre Mí</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#portfolio">Proyectos</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-sm">Hablemos</a>
+            </nav>
 
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.svg" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">NovinhoDev</h1>
-
-          <p class="title">Diseñador UX/UI</p>
+            <div class="hamburger-wrapper">
+                <div class="hamburger" id="hamburger-btn">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                </div>
+            </div>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Mostrar Contacto</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Gmail</p>
-
-              <a href="mailto:alexis2006jara@gmail.com" class="contact-link">alexis2006jara@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">celular</p>
-
-              <a href="tel:+595992489510" class="contact-link">+595 (983) 092-018</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Nacimiento</p>
-
-              <time datetime="2006-05-19">Mayo 19, 2006</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Ubicación</p>
-
-              <address>Ñemby, Central, PY</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.facebook.com/alexis14jara?mibextid=kFxxJD" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://x.com/SoyAlexisJara?t=CzsApKuDKUl-_ThS9v6Vdw&s=09" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://instagram.com/novinho.dev" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Sobre</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resumen</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portafolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contacto</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="sobre">
-
-        <header>
-          <h2 class="h2 article-title">Sobre Mí</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Soy <strong>Alexis Jara</strong>, especialista en diseño gráfico, desarrollo web y red team, 
-            apasionado por la tecnología y la creatividad. Mi camino como autodidacta me ha 
-            permitido combinar la seguridad informática con el desarrollo de proyectos innovadores, 
-            siempre orientado a resultados y con la convicción de que el aprendizaje constante 
-            es la clave del progreso. <br> <br>
-
-            He construido una comunidad de más de 19.9k seguidores en TikTok, 
-            donde comparto contenido de hacking ético para educar e inspirar a otros. 
-            Además, lidero dos emprendimientos que reflejan mi visión profesional: ZyLogix, 
-            una tienda de productos electrónicos, y Kreatix (que pronto evolucionará a Alnex Studio), 
-            una agencia que integra diseño gráfico, desarrollo web y aplicaciones web. 
-            Mi propósito es mostrar profesionalismo en cada proyecto y, al mismo tiempo, 
-            motivar a otros a creer en su potencial y transformar ideas en realidad.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">Lo que hago</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Diseño Gráfico</h4>
-
-                <p class="service-item-text">
-                  Branding o Construcción de Marca, Flyers, Anuncios Publicitarios y más.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Desarrollador Web</h4>
-
-                <p class="service-item-text">
-                  Diseño, desarrollo y mantenimiento de interfaz de usuario de un sitio-página web.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Desarrollador Móvil</h4>
-
-                <p class="service-item-text">
-                  Diseño, desarrollo, pruebas y mantenimiento de aplicaciones moviles hechos en Flutter.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonios</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>María López</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Trabajar con Alexis ha sido un cambio total para mi marca. 
-                    Su enfoque en diseño gráfico y desarrollo web no solo mejoró mi imagen, 
-                    sino que también me enseñó a ver la tecnología como una herramienta de crecimiento. 
-                    Su profesionalismo y creatividad inspiran confianza desde el primer momento.
-                  </p>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav-list">
+                <a href="#hero" class="mobile-link">
+                    <span class="nav-num">01</span>
+                    <span class="nav-text">Inicio</span>
+                </a>
+                <a href="#about" class="mobile-link">
+                    <span class="nav-num">02</span>
+                    <span class="nav-text">Sobre Mí</span>
+                </a>
+                <a href="#services" class="mobile-link">
+                    <span class="nav-num">03</span>
+                    <span class="nav-text">Servicios</span>
+                </a>
+                <a href="#portfolio" class="mobile-link">
+                    <span class="nav-num">04</span>
+                    <span class="nav-text">Portafolio</span>
+                </a>
+                <a href="#contact" class="mobile-link">
+                    <span class="nav-num">05</span>
+                    <span class="nav-text">Contacto</span>
+                </a>
+            </nav>
+            <div class="mobile-footer">
+                <div class="separator"></div>
+                <div class="social-links-minimal">
+                    <a href="#">LN</a>
+                    <a href="#">GH</a>
+                    <a href="#">IG</a>
                 </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Santiago F.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Alexis es una persona que le gusta aprender por cuenta propia. 
-                    Tuve la oportunidad de colaborar con él en un proyecto de aplicaciones web 
-                    y quedé sorprendido por su capacidad para resolver problemas y aportar ideas innovadoras. 
-                    Siempre busca ir más allá de lo esperado.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sofía R.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Descubrí el contenido de Alexis con el nombre de Novinho en TikTok y me atrapó lo interesante de su contenido. Explica los métodos más utilizados
-                    por los ciberdelincuentes para realizar ataques y como defenderse de manera efectiva.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Juan M.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Compré unos JBL Tune Flex en ZyLogix y la experiencia fue excelente. 
-                    La seriedad y el compromiso de ATC se notan en cada detalle. Sin duda, 
-                    recomiendo su trabajo porque refleja profesionalismo y pasión por lo que hace.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-2.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+                <p class="menu-email">hola@novinho.dev</p>
             </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>María López</h4>
-
-              <time datetime="2021-06-14">16 Febrero, 2025</time>
-
-              <div data-modal-text>
-                <p>
-                  Trabajar con Alexis ha sido un cambio total para mi marca. 
-                  Su enfoque en diseño gráfico y desarrollo web no solo mejoró mi imagen, 
-                  sino que también me enseñó a ver la tecnología como una herramienta de crecimiento. 
-                  Su profesionalismo y creatividad inspiran confianza desde el primer momento.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
         </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Emprendimientos</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resumen">
-
-        <header>
-          <h2 class="h2 article-title">Resumen</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Conocimientos</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Diseño Gráfico</h4>
-
-              <span>Nivel: Experto</span>
-
-              <p class="timeline-text">
-                Mi camino en el diseño gráfico comenzó de manera autodidacta en 2020. 
-                A medida que fui profundizando en mi aprendizaje a través de diversos cursos, 
-                adquirí nuevos conocimientos y habilidades que me permitieron enseñar a otros. 
-                Con el tiempo, desarrollé la capacidad de generar ideas innovadoras y plasmarlas de forma rápida y efectiva, 
-                logrando simplificar procesos creativos y maximizar resultados.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Desarrollador Web</h4>
-
-              <span>Nivel: Senior</span>
-
-              <p class="timeline-text">
-                Comencé mi carrera como desarrollador web en 2022, gracias a la oportunidad que me brindó 'EGG Coperation', 
-                donde pude introducirme en el mundo del desarrollo. A partir de allí, continué mi aprendizaje de manera autodidacta, 
-                lo que me ha permitido desarrollar la habilidad de crear sitios web funcionales y con un diseño atractivo. 
-                La creatividad adquirida en el diseño gráfico ha sido clave para lograr proyectos visualmente impactantes y 
-                bien estructurados.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Pentesting</h4>
-
-              <span>Nivel: Junior</span>
-
-              <p class="timeline-text">
-                Mi interés por el pentesting comenzó en 2023, cuando decidí adentrarme en el mundo de la ciberseguridad de manera 
-                autodidacta. Tras investigar y realizar diversos cursos, pude adquirir los conocimientos básicos sobre hacking y 
-                seguridad informática. Este aprendizaje me ha permitido comprender mejor la constante lucha entre el peligro y la 
-                protección, y estoy completamente dispuesto a profundizar aún más en este fascinante campo.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Lenguajes</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Python</h4>
-
-              <span>Utilidad Mía: Scripts</span>
-
-              <p class="timeline-text">
-                Python es un lenguaje de programación versátil, de alto nivel y de código abierto, 
-                conocido por su sencillez y legibilidad, lo que lo hace ideal para principiantes y 
-                profesionales. Sirve para una amplia gama de aplicaciones, 
-                incluyendo desarrollo web (principalmente el backend), 
-                ciencia de datos, inteligencia artificial (IA), 
-                machine learning (ML), y la automatización de tareas.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Dart</h4>
-
-              <span>Utilidad Mía: Desarrollo Móvil</span>
-
-              <p class="timeline-text">
-                Dart es un lenguaje de programación moderno, de código abierto y orientado a objetos, 
-                desarrollado por Google con el objetivo de ser un lenguaje eficiente para el 
-                desarrollo de aplicaciones rápidas en cualquier plataforma. 
-                Su versatilidad lo hace ideal para crear aplicaciones web, móviles, 
-                de escritorio y del lado del servidor, especialmente conocido por ser el 
-                lenguaje detrás del framework Flutter para desarrollo multiplataforma.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">HTML, CSS, JavaScript</h4>
-
-              <span>Utilidad Mía: Desarrollo Web</span>
-
-              <p class="timeline-text">
-                HTML, CSS y JavaScript son los tres lenguajes fundamentales para crear el 
-                front-end (la parte que el usuario ve) de un sitio web. 
-                HTML (Lenguaje de Marcado de Hipertexto) define la estructura y el 
-                contenido de la página web; CSS (Hojas de Estilo en Cascada) se encarga 
-                del diseño y la apariencia visual (colores, fuentes, etc.); 
-                y JavaScript añade interactividad y dinamismo al sitio, permitiendo que los 
-                elementos se muevan y cambien
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Habilidades</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Asesoramiento</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Desarrollo Web</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Diseño Gráfico</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Pentesting</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portafolio">
-
-        <header>
-          <h2 class="h2 article-title">Portafolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>Todos</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Scripts</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Desarrollo Web</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Aplicación</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>Todos</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Scripts</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Desarrollo Web</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Aplicación</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="scripts">
-              <a href="https://github.com/Alexis14jara/novinho-bot.git">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Novinho Bot</h3>
-
-                <p class="project-category">Scripts</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="desarrollo web">
-              <a href="https://alexis14jara.github.io/NovinhoDevPreview/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">NovinhoDev Sitio Web</h3>
-
-                <p class="project-category">Desarrollo Web</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="aplicación">
-              <a href="https://alexis14jara.github.io/NovinAPP/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Novin APP</h3>
-
-                <p class="project-category">Aplicación</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="scripts">
-              <a href="https://github.com/Alexis14jara/Youtube-Proyectos/tree/main/NoviSubdomains">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Enumera Subdominios</h3>
-
-                <p class="project-category">Scripts</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Primera publicación del Blog" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Diseño Web</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Feb 16, 2025</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Primera publicación del Blog</h3>
-
-                  <p class="blog-text">
-                    ¡Mi Blog Personal fue publicado con éxito a internet!
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contacto">
-
-        <header>
-          <h2 class="h2 article-title">Contacto</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116072.36865599154!2d-57.64966687859424!3d-25.384045487006437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da7e2891b7d9f%3A0xfed6e40d9f4e4de9!2s%C3%91emby%2C%20Paraguay!5e0!3m2!1ses!2s!4v1694196928489!5m2!1ses!2s"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Formulario</h3>
-
-          <iframe name="hiddenFrame" id="hiddenFrame" style="display:none;"></iframe>
-
-          <form action="https://api.web3forms.com/submit" id="miFormulario" method="POST" target="hiddenFrame" class="form" data-form>
-
-            <input type="hidden" name="access_key" value="eb87d0e8-b9d2-4c97-af34-1dc884ce936c">
-
-            <div class="input-wrapper">
-              <input type="text" name="name" class="form-input" placeholder="Nombres" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Mensaje" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Enviar Mensaje</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
     </div>
 
-  </main>
+    <section id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+
+        <div class="container hero-content">
+            <div class="hero-badge fade-in">
+                <span class="pulse"></span> Disponible para proyectos
+            </div>
+            <h1 class="fade-in delay-1">Diseño experiencias <br>digitales <span class="text-beige">memorables.</span>
+            </h1>
+            <p class="fade-in delay-2">Combino lógica de programación avanzada con diseño estético moderno para crear
+                software y sitios web que no solo funcionan, sino que inspiran.</p>
+
+            <div class="hero-actions fade-in delay-3">
+                <a href="#portfolio" class="btn btn-primary">Ver mi trabajo</a>
+                <a href="#contact" class="btn btn-outline">Contáctame</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-section">
+        <div class="track">
+            <div class="content">
+                &nbsp;DEVELOPMENT ✦ DESIGN ✦ STRATEGY ✦ UI/UX ✦ MOBILE APPS ✦ WEB SOLUTIONS ✦ DEVELOPMENT ✦ DESIGN ✦
+                STRATEGY ✦ UI/UX ✦
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image-col reveal-left">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <img class="about-imagen" src="./assets/images/about-image.png" alt="">
+                        </div>
+                        <div class="floating-card card-1">
+                            <i class="ph ph-code"></i> Developer
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="ph ph-paint-brush"></i> Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text-col reveal-right">
+                    <span class="section-tag">01. Sobre Mí</span>
+                    <h2>Código limpio,<br>Diseño <span class="text-beige">humano.</span></h2>
+                    <p>En un mundo digital saturado, la claridad es poder. Soy "NovinhoDev", un desarrollador full-stack
+                        con ojo para el detalle visual.</p>
+                    <p>No solo entrego código; entrego soluciones escalables. Me especializo en traducir identidades de
+                        marca en interfaces fluidas y funcionales, cuidando cada pixel y cada línea de lógica.</p>
+
+                    <ul class="check-list">
+                        <li><i class="ph-fill ph-check-circle"></i> Diseño Centrado en el Usuario</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Arquitectura de Software Escalable</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Optimización de Rendimiento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-darker">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">02. Stack</span>
+                <h2>Arsenal Tecnológico</h2>
+            </div>
+
+            <div class="stack-grid">
+                <div class="stack-card reveal-up">
+                    <div class="stack-icon"><i class="ph ph-globe"></i></div>
+                    <h3>Frontend</h3>
+                    <div class="stack-tags">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span>
+                    </div>
+                </div>
+                <div class="stack-card reveal-up delay-1">
+                    <div class="stack-icon"><i class="ph ph-database"></i></div>
+                    <h3>Backend</h3>
+                    <div class="stack-tags">
+                        <span>Node.js</span><span>Python</span><span>PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="stack-card reveal-up delay-2">
+                    <div class="stack-icon"><i class="ph ph-device-mobile"></i></div>
+                    <h3>Mobile & Tools</h3>
+                    <div class="stack-tags">
+                        <span>Flutter</span><span>React Native</span><span>Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header between">
+                <div>
+                    <span class="section-tag">03. Trabajo</span>
+                    <h2>Proyectos Destacados</h2>
+                </div>
+                <a href="#" class="view-all-link">Ver todo el repositorio <i class="ph ph-arrow-right"></i></a>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal-up">
+                    <div class="portfolio-thumb">
+                        <img class="portfolio-image" src="./assets/images/portfolio-3.png" alt="">
+                        <div class="thumb-overlay">
+                            <a href="https://alexis14jara.github.io/InoFisioPreview/" class="btn-circle"><i
+                                    class="ph ph-arrow-up-right"></i></a>
+                        </div>
+                        <span class="thumb-cat">Landing Page</span>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>InoFisio</h3>
+                        <p>Sitio web profesional para clínica de fisioterapia.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal-up delay-1">
+                    <div class="portfolio-thumb">
+                        <img class="portfolio-image" src="./assets/images/portfolio-2.png" alt="">
+                        <div class="thumb-overlay">
+                            <a href="https://alexis14jara.github.io/MevoStorePreview/" class="btn-circle"><i
+                                    class="ph ph-arrow-up-right"></i></a>
+                        </div>
+                        <span class="thumb-cat">E-Commerce</span>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>MevoStore</h3>
+                        <p>E-commerce moderno con enfoque en conversión.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal-up delay-2">
+                    <div class="portfolio-thumb">
+                        <img class="portfolio-image" src="./assets/images/portfolio-1.png" alt="">
+                        <div class="thumb-overlay">
+                            <a href="https://alexis14jara.github.io/PabloBarber/" class="btn-circle"><i
+                                    class="ph ph-arrow-up-right"></i></a>
+                        </div>
+                        <span class="thumb-cat">Landing Page</span>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>PabloBarber</h3>
+                        <p>Web para barbería con identidad y estilo urbano.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
+    <!-- CTA Intermedio -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box reveal-up">
+                <h3>¿Tenés una idea en mente?</h3>
+                <p>La analizamos sin compromiso y te digo si vale la pena.</p>
+                <a href="#contact" class="btn btn-primary">Hablemos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Preguntas Frecuentes</span>
+                <h2>Dudas <span class="text-beige">Comunes</span></h2>
+            </div>
+
+            <div class="faq-grid">
+                <!-- Pregunta 1 -->
+                <div class="faq-item reveal-up">
+                    <details>
+                        <summary>
+                            <span class="faq-question">¿Cuánto cuesta un sitio web?</span>
+                            <span class="faq-icon"><i class="ph ph-caret-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Cada proyecto es único. El precio depende de la complejidad, funcionalidades y diseño.
+                                Sin embargo, siempre ofrezco opciones escalables: desde soluciones básicas para empezar
+                                hasta desarrollos a medida. ¡Escríbeme y cotizamos sin compromiso!</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="faq-item reveal-up delay-1">
+                    <details>
+                        <summary>
+                            <span class="faq-question">¿Cuánto tarda el desarrollo?</span>
+                            <span class="faq-icon"><i class="ph ph-caret-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Una Landing Page simple puede estar lista en 1 semana. Proyectos más complejos como
+                                e-commerce o plataformas a medida pueden tomar de 3 a 6 semanas. Definiremos un
+                                cronograma claro desde el inicio.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="faq-item reveal-up delay-2">
+                    <details>
+                        <summary>
+                            <span class="faq-question">¿Trabajás con pagos por etapas?</span>
+                            <span class="faq-icon"><i class="ph ph-caret-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Sí, generalmente trabajo con un 50% de anticipo para reservar la fecha y comenzar, y el
+                                50% restante contra entrega y aprobación final del proyecto.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="faq-item reveal-up delay-3">
+                    <details>
+                        <summary>
+                            <span class="faq-question">¿Incluye soporte y mantenimiento?</span>
+                            <span class="faq-icon"><i class="ph ph-caret-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Todos mis desarrollos incluyen garantías post-entrega por bugs. Además, ofrezco planes de
+                                mantenimiento mensuales opcionales para actualizaciones, seguridad y dudas continuas.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-darker">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="section-header center">
+                    <span class="section-tag">04. Contacto</span>
+                    <h2>Empecemos un <span class="text-beige">Proyecto</span></h2>
+                    <p class="contact-subtitle">Cuéntame sobre tu idea y hagamos algo increíble juntos.</p>
+                </div>
+
+                <iframe name="hiddenFrame" id="hiddenFrame" style="display:none;"></iframe>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" target="hiddenFrame">
+                    <input type="hidden" name="access_key" value="77b2e8be-fa4f-44c8-a458-bf292c96e44c">
+                    <input type="hidden" name="subject" value="Nuevo contacto desde la web">
+                    <!-- Row 1: Basico -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre y Apellido</label>
+                            <input type="text" name="Nombre" id="name" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" name="Correo" id="email" placeholder="hola@ejemplo.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Tipo de Ayuda -->
+                    <div class="form-group">
+                        <label class="group-label">¿En qué puedo ayudarte?</label>
+                        <div class="select-options-grid">
+                            <label class="select-option">
+                                <input type="radio" name="Proyecto" value="Sitio_web_corporativo" required>
+                                <span class="option-content">Sitio web corporativo</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Proyecto" value="Landing_Page">
+                                <span class="option-content">Landing page</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Proyecto" value="Portfolio_profesional">
+                                <span class="option-content">Portafolio profesional</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Proyecto" value="Tienda_online">
+                                <span class="option-content">Tienda online</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Proyecto" value="Rediseño_de_sitio_existente">
+                                <span class="option-content">Rediseño de sitio existente</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Proyecto" value="Otro">
+                                <span class="option-content">Otro</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Presupuesto -->
+                    <div class="form-group">
+                        <label class="group-label">Presupuesto estimado</label>
+                        <div class="select-options-flex">
+                            <label class="select-option">
+                                <input type="radio" name="Presupuesto" value="Bajo_Estoy_empezando" required>
+                                <span class="option-content">Bajo / Estoy empezando</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Presupuesto" value="Medio">
+                                <span class="option-content">Medio</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Presupuesto" value="Alto">
+                                <span class="option-content">Alto</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Presupuesto" value="No_estoy_seguro">
+                                <span class="option-content">No estoy seguro</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Tiempo -->
+                    <div class="form-group">
+                        <label class="group-label">¿Cuándo lo necesitas?</label>
+                        <div class="select-options-flex">
+                            <label class="select-option">
+                                <input type="radio" name="Tiempo" value="Lo_antes_posible" required>
+                                <span class="option-content">Lo antes posible</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Tiempo" value="1-2_semanas">
+                                <span class="option-content">1–2 semanas</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Tiempo" value="1_mes">
+                                <span class="option-content">1 mes</span>
+                            </label>
+                            <label class="select-option">
+                                <input type="radio" name="Tiempo" value="Flexible">
+                                <span class="option-content">Flexible</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Row 5: Idea -->
+                    <div class="form-group">
+                        <label for="message">Cuéntame brevemente tu idea</label>
+                        <textarea id="message" name="Mensaje" rows="4" placeholder="Mensaje" required></textarea>
+                    </div>
 
 
+                    <div class="center-btn">
+                        <button type="submit" class="btn btn-primary submit-btn">Enviar Mensaje</button>
+                    </div>
+                </form>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+                <!-- Success Message -->
+                <div id="success-message" class="success-message" style="display: none;">
+                    <div class="success-content">
+                        <div class="success-icon">
+                            <i class="ph-fill ph-check-circle"></i>
+                        </div>
+                        <h3>¡Mensaje Enviado!</h3>
+                        <p>Gracias por contactarme. Analizaré tu proyecto y te responderé lo antes posible.</p>
+                        <button id="new-message-btn" class="btn btn-outline">Enviar otro mensaje</button>
+                    </div>
+                </div>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </div>
+        </div>
+    </section>
 
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo">NovinhoDev_</a>
+                    <p>Creando el futuro digital, un píxel a la vez.</p>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#portfolio">Portafolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Desarrollo Web</a></li>
+                        <li><a href="#">Diseño UI/UX</a></li>
+                        <li><a href="#">Software a medida</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Boletín</h4>
+                    <p>Novedades tech y recursos.</p>
+                    <form class="newsletter-input">
+                        <input type="email" placeholder="tu@email.com">
+                        <button type="submit"><i class="ph ph-paper-plane-right"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="big-text">NOVINHO</div>
+                <div class="bottom-bar">
+                    <p>&copy; 2026 NovinhoDev. Todos los derechos reservados.</p>
+                    <div class="socials">
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"><i class="ph ph-github-logo"></i></a>
+                        <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/595983092018?text=Hola!%20Vi%20tu%20portafolio%20y%20me%20gustaría%20consultar%20sobre%20un%20proyecto%20web."
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="wa-icon">
+            <path fill="currentColor"
+                d="M19.11 17.44c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.58-.48-.5-.66-.51h-.56c-.2 0-.51.07-.78.37-.27.29-1.02.99-1.02 2.41s1.05 2.8 1.2 3c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.37.24-.66.24-1.22.17-1.34-.07-.12-.27-.2-.56-.34z" />
+        </svg>
+    </a>
+
+
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
