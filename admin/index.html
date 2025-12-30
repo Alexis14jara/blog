@@ -2,58 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Admin - Novinho</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <style>
-        body { font-family: Arial; text-align:center; margin-top:50px; }
-        input, button { padding: 10px; margin:5px; font-size:16px; }
-    </style>
+    <title>Admin | Novinho Dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Panel de Admin</h1>
-
-    <div id="login-section">
-        <button id="login-btn">Iniciar sesión / Activar cuenta</button>
-    </div>
-
-    <div id="user-section" style="display:none;">
-        <h2>Bienvenido, <span id="user-name"></span>!</h2>
-        <button id="logout-btn">Cerrar sesión</button>
-    </div>
-
-    <script>
-        const identity = netlifyIdentity.init();
-
-        const loginBtn = document.getElementById('login-btn');
-        const logoutBtn = document.getElementById('logout-btn');
-        const userSection = document.getElementById('user-section');
-        const loginSection = document.getElementById('login-section');
-        const userNameSpan = document.getElementById('user-name');
-
-        // Detecta si la URL tiene invite_token y abre automáticamente el modal
-        if (window.location.hash.includes('invite_token')) {
-            identity.open('signup'); // Muestra el formulario para crear contraseña
-        }
-
-        loginBtn.addEventListener('click', () => {
-            identity.open(); // Abre login / signup modal
-        });
-
-        logoutBtn.addEventListener('click', () => {
-            identity.logout();
-        });
-
-        identity.on('login', user => {
-            loginSection.style.display = 'none';
-            userSection.style.display = 'block';
-            userNameSpan.textContent = user.user_metadata.full_name || user.email;
-            identity.close();
-        });
-
-        identity.on('logout', () => {
-            loginSection.style.display = 'block';
-            userSection.style.display = 'none';
-        });
-    </script>
+    <!-- Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
 </body>
 </html>
+
