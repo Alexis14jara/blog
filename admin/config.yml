@@ -2,6 +2,7 @@ backend:
   name: github
   repo: Alexis14jara/blog
   branch: main
+  site_domain: novinhodev.netlify.app
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
