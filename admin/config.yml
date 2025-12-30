@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: Alexis14jara/blog
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
