@@ -5,32 +5,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileLinks = document.querySelectorAll(".mobile-link");
   const header = document.getElementById("main-header");
 
-  function toggleMenu() {
-    const isActive = hamburgerBtn.classList.contains("active");
+  if (hamburgerBtn && mobileMenu) {
+    function toggleMenu() {
+      const isActive = hamburgerBtn.classList.contains("active");
 
-    if (!isActive) {
-      // Abrir menú
-      hamburgerBtn.classList.add("active");
-      mobileMenu.classList.add("active");
-      document.body.style.overflow = "hidden"; // Bloquear scroll
-    } else {
-      // Cerrar menú
-      hamburgerBtn.classList.remove("active");
-      mobileMenu.classList.remove("active");
-      document.body.style.overflow = "auto"; // Reactivar scroll
+      if (!isActive) {
+        // Abrir menú
+        hamburgerBtn.classList.add("active");
+        mobileMenu.classList.add("active");
+        document.body.style.overflow = "hidden"; // Bloquear scroll
+      } else {
+        // Cerrar menú
+        hamburgerBtn.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "auto"; // Reactivar scroll
+      }
+    }
+
+    hamburgerBtn.addEventListener("click", toggleMenu);
+
+    // Cerrar menú al hacer clic en un enlace
+    if (mobileLinks.length > 0) {
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (hamburgerBtn.classList.contains("active")) {
+            toggleMenu();
+          }
+        });
+      });
     }
   }
-
-  hamburgerBtn.addEventListener("click", toggleMenu);
-
-  // Cerrar menú al hacer clic en un enlace
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (hamburgerBtn.classList.contains("active")) {
-        toggleMenu();
-      }
-    });
-  });
 
   // --- 2. EFECTO HEADER GLASS AL SCROLLEAR ---
   window.addEventListener("scroll", () => {
@@ -122,5 +126,36 @@ document.addEventListener("DOMContentLoaded", () => {
         contactForm.style.animation = "fadeIn 0.5s ease-out";
       });
     }
+  }
+  // --- 6. FILTRO DE CATEGORÍAS (Blog/Portafolio) ---
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+  if (filterBtns.length > 0 && portfolioItems.length > 0) {
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Remover clase active de todos
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        // Activar el clickeado
+        btn.classList.add("active");
+
+        const category = btn.getAttribute("data-category");
+
+        portfolioItems.forEach((item) => {
+          // Asumimos que el item tiene un atributo data-category o usamos el texto del span
+          const itemCategory = item.getAttribute("data-category");
+
+          if (category === "all" || itemCategory === category) {
+            item.style.display = "block";
+            // Reiniciar animación
+            item.classList.remove("reveal-up");
+            void item.offsetWidth; // Trigger reflow
+            item.classList.add("reveal-up");
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
   }
 });

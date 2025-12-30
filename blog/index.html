@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aprende desarrollo web, front-end y programación con Novinho Dev en Paraguay. Tutoriales, tips y noticias.">
+    <meta name="keywords"
+        content="Blog, Novinho Dev, Alexis Jara, Desarrollador Web, Front-End Developer, Paraguay, Sitios Web, Landing Pages, Portafolios">
+    <meta name="author" content="Novinho Dev (Alexis Jara)">
+    <title>Blog | Novinho Dev - Desarrollo Web y Front-End en Paraguay</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="svg+xml" href="favicon.svg">
+    <style>
+        /* Estilos específicos para el filtro en linea para iteracion rapida */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-gray);
+            padding: 8px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--beige);
+            color: var(--bg-dark);
+            border-color: var(--beige);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="noise-overlay"></div>
+
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                Novinho<span class="logo-dev">Dev</span><span class="logo-guion">_</span>
+            </a>
+
+            <!-- Header Simplificado: Solo botón para volver -->
+            <nav class="nav-desktop">
+                <a href="/" class="btn btn-sm btn-outline"><i class="ph ph-arrow-left"></i> Volver al
+                    Inicio</a>
+            </nav>
+
+            <!-- Hamburguesa eliminada ya que solo queremos volver atras -->
+        </div>
+    </header>
+
+    <section id="hero" class="blog-hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px;">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+
+        <div class="container hero-content">
+            <div class="hero-badge fade-in">
+                <span class="pulse"></span> Blog Personal
+            </div>
+            <h1 class="fade-in delay-1">Ideas, Código & <span class="text-beige">Experiencias</span>
+            </h1>
+            <p class="fade-in delay-2">Un espacio donde comparto lo que aprendo sobre desarrollo web, diseño y carrera
+                profesional.</p>
+        </div>
+    </section>
+
+    <section id="blog-posts" class="section">
+        <div class="container">
+
+            <!-- Category Filter -->
+            <div class="filter-container reveal-up">
+                <button class="filter-btn active" data-category="all">Ver Todo</button>
+                <button class="filter-btn" data-category="Noticias">Noticias</button>
+                <button class="filter-btn" data-category="Tutoriales">Tutoriales</button>
+                <button class="filter-btn" data-category="Front-End">Front-End</button>
+                <button class="filter-btn" data-category="SEO_Web">SEO & Web</button>
+                <button class="filter-btn" data-category="Opinion">Opinión / Experiencia</button>
+            </div>
+
+            <div class="portfolio-grid">
+
+                <!-- Blog Post 1 -->
+                <div class="portfolio-item reveal-up" data-category="Front-End">
+                    <div class="portfolio-thumb">
+                        <img class="portfolio-image" src="../assets/images/portfolio-2.png" alt="Optimización Web">
+                        <div class="thumb-overlay">
+                            <a href="#" class="btn-circle"><i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <span class="thumb-cat">Front-End</span>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>Optimización de Imágenes</h3>
+                        <p>Técnicas modernas para reducir el peso de tus imágenes sin perder calidad.</p>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="portfolio-item reveal-up delay-1" data-category="Tutoriales">
+                    <div class="portfolio-thumb">
+                        <img class="portfolio-image" src="../assets/images/portfolio-1.png" alt="CSS Grid vs Flexbox">
+                        <div class="thumb-overlay">
+                            <a href="#" class="btn-circle"><i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <span class="thumb-cat">Tutoriales</span>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>Grid vs Flexbox</h3>
+                        <p>¿Cuándo usar cada uno? Una guía práctica para maquetación web.</p>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="portfolio-item reveal-up delay-2" data-category="Opinion">
+                    <div class="portfolio-thumb">
+                        <img class="portfolio-image" src="../assets/images/portfolio-3.png" alt="Accesibilidad Web">
+                        <div class="thumb-overlay">
+                            <a href="#" class="btn-circle"><i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <span class="thumb-cat">Opinión</span>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>Mi viaje como Freelancer</h3>
+                        <p>Lecciones aprendidas en mi primer año trabajando independiente.</p>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="portfolio-item reveal-up delay-2" data-category="SEO_Web">
+                    <div class="portfolio-thumb">
+                        <img class="portfolio-image" src="../assets/images/portfolio-2.png" alt="SEO Basics">
+                        <div class="thumb-overlay">
+                            <a href="#" class="btn-circle"><i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <span class="thumb-cat">SEO & Web</span>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>SEO para Desarrolladores</h3>
+                        <p>Etiquetas meta, semántica y estructura que Google ama.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo footer-logo">NovinhoDev_</a>
+                    <p>Creando el futuro digital, un píxel a la vez.</p>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="../index.html#hero">Inicio</a></li>
+                        <li><a href="../index.html#about">Sobre Mí</a></li>
+                        <li><a href="../index.html#portfolio">Portafolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Desarrollo Web</a></li>
+                        <li><a href="#">Diseño UI/UX</a></li>
+                        <li><a href="#">Software a medida</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Boletín</h4>
+                    <p>Novedades tech y recursos.</p>
+                    <form class="newsletter-input">
+                        <input type="email" placeholder="tu@email.com">
+                        <button type="submit"><i class="ph ph-paper-plane-right"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="big-text">NOVINHO</div>
+                <div class="bottom-bar">
+                    <p>&copy; 2026 NovinhoDev. Todos los derechos reservados.</p>
+                    <div class="socials">
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"><i class="ph ph-github-logo"></i></a>
+                        <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/595983092018?text=Hola!%20Le%20tu%20blog%20y%20me%20gustar%C3%ADa%20hacerte%20una%20consulta."
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="wa-icon">
+            <path fill="currentColor"
+                d="M19.11 17.44c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.58-.48-.5-.66-.51h-.56c-.2 0-.51.07-.78.37-.27.29-1.02.99-1.02 2.41s1.05 2.8 1.2 3c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.37.24-.66.24-1.22.17-1.34-.07-.12-.27-.2-.56-.34z" />
+        </svg>
+    </a>
+
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
