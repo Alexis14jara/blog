@@ -1,20 +1,20 @@
 backend:
   name: github
-  repo: Alexis14jara/blog
+  repo: "Alexis14jara/blog"
   branch: main
-  site_domain: novinhodev.netlify.app
+  auth_type: "oauth"
+  oauth_client_id: "Ov23likpSv3mt6bHrsaY"
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "/posts"
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "datetime" }
-      - { label: "Descripción", name: "description", widget: "text" }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
