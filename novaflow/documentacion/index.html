@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentación completa de NovaFlow - Automatización Inteligente">
+    <meta name="keywords" content="NovaFlow, Documentación, Automatización, Chrome Extension">
+    <meta name="author" content="NovinhoDev">
+    <title>Documentación - NovaFlow | Automatización Inteligente</title>
+    <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        /* Documentation-specific styles */
+        .doc-layout {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 100px;
+            gap: 40px;
+        }
+
+        /* Sidebar Navigation */
+        .doc-sidebar {
+            position: sticky;
+            top: 100px;
+            width: 280px;
+            height: fit-content;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px 20px;
+            flex-shrink: 0;
+        }
+
+        .doc-sidebar h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .doc-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .doc-nav a {
+            padding: 10px 15px;
+            border-radius: 6px;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .doc-nav a:hover {
+            background: rgba(107, 70, 193, 0.1);
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .doc-nav a.active {
+            background: rgba(107, 70, 193, 0.15);
+            color: var(--primary);
+            border-left: 3px solid var(--primary);
+        }
+
+        .doc-nav .sub-link {
+            padding-left: 30px;
+            font-size: 0.85rem;
+        }
+
+        .link-download {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .link-download:hover {
+            color: var(--primary-hover);
+            border-bottom: none;
+        }
+
+        /* Main Content */
+        .doc-content {
+            flex: 1;
+            min-width: 0;
+            padding: 0 20px 80px;
+        }
+
+        .doc-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #a0a0b0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .doc-content h2 {
+            font-size: 2rem;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .doc-content h2:first-of-type {
+            margin-top: 40px;
+        }
+
+        .doc-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .doc-content p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .doc-content ul,
+        .doc-content ol {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+
+        .doc-content li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .doc-content code {
+            background: rgba(107, 70, 193, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--primary);
+            font-family: 'Courier New', monospace;
+        }
+
+        .doc-content .pro {
+            background-color: #efeb00;
+            color: #000;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Screenshot Container */
+        .screenshot {
+            margin: 40px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: translateY(-5px);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-caption {
+            background: var(--bg-card);
+            padding: 15px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Info boxes */
+        .info-box {
+            background: rgba(107, 70, 193, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 6px;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        .warning-box {
+            background: rgba(214, 158, 46, 0.1);
+            border-left: 4px solid var(--warning);
+        }
+
+        .pro-box {
+            background: rgba(118, 118, 118, 0.1);
+            border-left: 4px solid #efeb00;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .doc-layout {
+                flex-direction: column;
+            }
+
+            .doc-sidebar {
+                position: relative;
+                top: 0;
+                width: 100%;
+            }
+
+            .doc-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .doc-content h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="../assets/images/logo.svg" alt="Logo de NovaFlow">
+                <p>Nova</p>
+                <spam class="flow">Flow</spam> <span class="badge">BETA v1.0</span>
+            </div>
+            <div>
+                <a href="../" style="margin-right: 20px; color: var(--text-muted)">Inicio</a>
+                <a href="#instalacion" class="btn btn-primary">Descargar Extensión</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="doc-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="doc-sidebar">
+            <h3>Contenido</h3>
+            <nav class="doc-nav">
+                <a href="#introduccion" class="active">Introducción</a>
+                <a href="#instalacion">Instalación</a>
+                <a href="#configuracion">Configuración</a>
+                <a href="#configuracion-pausas" class="sub-link">Pausas entre mensajes</a>
+                <a href="#configuracion-limites" class="sub-link">Límites de seguridad</a>
+                <a href="#uso">Uso de la Extensión</a>
+                <a href="#uso-cargar" class="sub-link">Cargar contactos</a>
+                <a href="#uso-campana" class="sub-link">Iniciar campaña</a>
+                <a href="#reportes">Reportes y Análisis</a>
+                <a href="#mejores-practicas">Mejores Prácticas</a>
+                <a href="#faq">Preguntas Frecuentes</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="doc-content">
+            <h1>Documentación NovaFlow</h1>
+            <p style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 40px;">
+                Guía completa para dominar la automatización de campañas masivas con precisión quirúrgica.
+            </p>
+
+            <!-- Introducción -->
+            <section id="introduccion">
+                <h2>Introducción</h2>
+                <p>
+                    Novaflow es una extensión para Google Chrome diseñada para facilitar 
+                    el envío de campañas de mensajes a través de WhatsApp Web, de forma organizada, 
+                    controlada y segura.
+                </p>
+                <p>
+                    Su objetivo es ayudar a emprendedores, equipos y profesionales a:
+                </p>
+                <ul>
+                    <li>Enviar mensajes de manera masiva sin perder el control</li>
+                    <li>Mantener un historial completo de campañas</li>
+                    <li>Analizar resultados con reportes claros</li>
+                    <li>Reducir errores y riesgos de bloqueo mediante límites y pausas inteligentes</li>
+                </ul>
+                <p>
+                    Novaflow funciona localmente en tu navegador y se integra directamente 
+                    con WhatsApp Web, sin servidores externos ni intermediarios.
+                </p>
+
+                <div class="info-box">
+                    <p><strong>💡 Nota importante:</strong> NovaFlow simula comportamiento humano para evitar
+                        detecciones automáticas.
+                        Siempre respeta las políticas de uso de WhatsApp y envía mensajes solo a contactos que hayan
+                        dado su consentimiento.</p>
+                </div>
+
+                <div class="screenshot">
+                    <img src="./assets/images/dashboard.png" alt="Dashboard principal de NovaFlow">
+                    <div class="screenshot-caption">
+                        Dashboard principal mostrando la interfáz de usuario de NovaFlow
+                    </div>
+                </div>
+            </section>
+
+            <!-- Instalación -->
+            <section id="instalacion">
+                <h2>Instalación</h2>
+                <h3>
+                    Requisitos:
+                </h3>
+                <ul>
+                    <li>- Google Chrome (versión actualizada)</li>
+                    <li>- Acceso a WhatsApp Web</li>
+                    <li>- Sesión activa en WhatsApp</li>
+                </ul>
+                <h3>
+                    Instalación manual (Beta)
+                </h3>
+                <ol>
+                    <li>Descarga la carpeta de la extensión Novaflow: <a class="link-download" href="../NovaFlow-Beta.zip" download="NovaFlow-Beta.zip">Clic Para Descargar NovaFlow-Beta.zip</a></li>
+                    <li>Abre Chrome y accede a <code>chrome://extensions</code>.</li>
+                    <li>Activa Modo desarrollador.</li>
+                    <li>Haz clic en Cargar sin empaquetar.</li>
+                    <li>Selecciona la carpeta de Novaflow.</li>
+                </ol>
+                <p>
+                    Una vez instalada, el icono de Novaflow aparecerá en la barra de extensiones de Chrome.
+                </p>
+
+                <div class="info-box warning-box">
+                    <p><strong>⚠️ Atención:</strong> Necesitas tener WhatsApp Web abierto y una sesión activa para que
+                        NovaFlow funcione correctamente.</p>
+                </div>
+            </section>
+
+            <!-- Configuración -->
+            <section id="configuracion">
+                <h2>Configuración</h2>
+                <p>
+                    Antes de lanzar tu primera campaña, es crucial configurar correctamente los parámetros de seguridad.
+                    NovaFlow te ofrece control total sobre el comportamiento de envío para maximizar la efectividad y
+                    minimizar riesgos.
+                </p>
+
+                <div class="screenshot">
+                    <img src="./assets/images/config.png" alt="Panel de configuración de NovaFlow">
+                    <div class="screenshot-caption">
+                        Panel de configuración con controles de pausas y límites de seguridad
+                    </div>
+                </div>
+
+                <h3 id="configuracion-pausas"
+                    style="font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; color: var(--text-main);">
+                    Pausas entre mensajes
+                </h3>
+                <p>
+                    Las pausas aleatorias son fundamentales para simular comportamiento humano. Configura dos valores:
+                </p>
+                <ul>
+                    <li><strong>Pausa mínima:</strong> Tiempo mínimo de espera entre mensajes (recomendado: 20-40
+                        segundos)</li>
+                    <li><strong>Pausa máxima:</strong> Tiempo máximo de espera entre mensajes (recomendado: 60-90
+                        segundos)</li>
+                </ul>
+                <p>
+                    El sistema generará pausas aleatorias dentro de este rango, haciendo que cada envío sea único e
+                    impredecible.
+                </p>
+
+                <h3 id="configuracion-limites"
+                    style="font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; color: var(--text-main);">
+                    Límites de seguridad
+                </h3>
+                <p>
+                    Establece un límite máximo de mensajes por sesión. Una vez alcanzado este límite, la campaña se
+                    detendrá automáticamente.
+                    Esto te permite dividir campañas grandes en múltiples sesiones más seguras.
+                </p>
+                <p>
+                    <strong>Recomendación:</strong> Para cuentas nuevas, comienza con límites de 50-100 mensajes por
+                    sesión.
+                </p>
+            </section>
+
+            <!-- Uso de la Extensión -->
+            <section id="uso">
+                <h2>Uso de la Extensión</h2>
+                <p>
+                    Una vez configurada, usar NovaFlow es extremadamente sencillo. El flujo de trabajo típico consta de
+                    tres pasos principales:
+                </p>
+
+                <h3 id="uso-cargar"
+                    style="font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; color: var(--text-main);">
+                    1. Cargar lista de contactos
+                </h3>
+                <p>
+                    Prepara tu lista de contactos, con un número por línea o separadas por ",". Los números deben
+                    incluir el código de país. <br>
+                    Por ejemplo:
+                </p>
+                <ul>
+                    <li>5491112345678 (Argentina)</li>
+                    <li>5511987654321 (Brasil)</li>
+                    <li>34612345678 (España)</li>
+                </ul>
+                <p>
+                    Haz clic en "Lista de Contactos" y pega los números. NovaFlow validará automáticamente el
+                    formato.
+                </p>
+
+                <h3 id="uso-campana"
+                    style="font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; color: var(--text-main);">
+                    2. Personalizar mensaje
+                </h3>
+                <p>
+                    Escribe tu mensaje en el campo de texto. Próximamente se agregara la funcionalidad de variables.
+                </p>
+
+                <h3 style="font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; color: var(--text-main);">
+                    3. Iniciar campaña
+                </h3>
+                <p>
+                    Haz clic en "Iniciar Campaña" y NovaFlow comenzará a procesar tu lista automáticamente.
+                    Puedes pausar o detener la campaña en cualquier momento desde el panel de control.
+                </p>
+
+                <div class="info-box">
+                    <p><strong>💡 Consejo:</strong> Mantén la pestaña de WhatsApp Web activa durante la campaña.
+                        No es necesario que esté visible, pero debe permanecer abierta en el navegador.</p>
+                </div>
+            </section>
+
+            <!-- Reportes y Análisis -->
+            <section id="reportes">
+                <h2>Reportes y Análisis</h2>
+                <p>
+                    NovaFlow genera reportes detallados en tiempo real de cada campaña. Visualiza métricas clave como:
+                </p>
+                <ul>
+                    <li><strong>Fecha y hora exacta de inicio</strong></li>
+                    <li><strong>Registro individual de cada mensaje enviado</strong></li>
+                    <li><strong>Hora, minuto y segundo de cada envío</strong></li>
+                    <li><strong>Estado del mensaje:</strong> Enviado, fallido, con descripción del fallo.</li>
+                </ul>
+
+                <div class="screenshot">
+                    <img src="./assets/images/reports.png" alt="Reporte detallado de campaña">
+                    <div class="screenshot-caption">
+                        Vista de reporte con estado detallado de cada mensaje enviado
+                    </div>
+                </div>
+
+                <div class="info-box pro-box">
+                    <p>
+                        Todos los reportes se pueden exportar en formato CSV para análisis posterior o integración con tus
+                        sistemas CRM. <br> <spam class="pro"><strong>ESTA FUNCIONALIDAD SOLO ESTÁ DISPONIBLE EN LA VERSIÓN PRO</strong></spam>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Mejores Prácticas -->
+            <section id="mejores-practicas">
+                <h2>Mejores Prácticas</h2>
+                <p>
+                    Para obtener los mejores resultados y mantener tu cuenta segura, sigue estas recomendaciones:
+                </p>
+
+                <ul>
+                    <li><strong>Calienta tu cuenta:</strong> Si es una cuenta nueva, comienza con volúmenes bajos (20-30
+                        mensajes/día)
+                        y aumenta gradualmente durante 2-3 semanas</li>
+                    <li><strong>Varía tus mensajes:</strong> Evita enviar el mismo texto idéntico a todos.</li>
+                    <li><strong>Respeta horarios:</strong> Envía mensajes en horarios comerciales (9am - 8pm) para mejor
+                        recepción</li>
+                    <li><strong>Divide campañas grandes:</strong> En lugar de 500 mensajes de una vez, divide en 5
+                        sesiones de 100</li>
+                    <li><strong>Monitorea respuestas:</strong> Mantén un ojo en las respuestas y ajusta tu estrategia
+                        según el feedback</li>
+                    <li><strong>Limpia tu lista:</strong> Elimina números inválidos después de cada campaña para mejorar
+                        tasas de entrega</li>
+                </ul>
+
+                <div class="info-box warning-box">
+                    <p><strong>⚠️ Importante:</strong> El uso excesivo o irresponsable puede resultar en el bloqueo
+                        temporal o permanente
+                        de tu cuenta de WhatsApp. Usa NovaFlow con responsabilidad y siempre respeta las políticas de la
+                        plataforma.</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Preguntas Frecuentes</h2>
+
+                <h3 style="font-size: 1.3rem; margin-top: 30px; margin-bottom: 10px; color: var(--text-main);">
+                    ¿Es seguro usar NovaFlow?
+                </h3>
+                <p>
+                    Sí, siempre que sigas las mejores prácticas y respetes los límites recomendados. NovaFlow está
+                    diseñado para
+                    simular comportamiento humano y minimizar riesgos, pero el uso responsable es fundamental.
+                </p>
+
+                <h3 style="font-size: 1.3rem; margin-top: 30px; margin-bottom: 10px; color: var(--text-main);">
+                    ¿Puedo usar NovaFlow en WhatsApp Business?
+                </h3>
+                <p>
+                    Sí, NovaFlow es compatible tanto con WhatsApp personal como con WhatsApp Business Web.
+                </p>
+
+                <h3 style="font-size: 1.3rem; margin-top: 30px; margin-bottom: 10px; color: var(--text-main);">
+                    ¿Qué pasa si cierro el navegador durante una campaña?
+                </h3>
+                <p>
+                    La campaña se detendrá automáticamente. NovaFlow guardará el progreso y podrás reanudar desde donde
+                    quedaste
+                    cuando vuelvas a abrir la extensión.
+                </p>
+
+                <h3 style="font-size: 1.3rem; margin-top: 30px; margin-bottom: 10px; color: var(--text-main);">
+                    ¿Cuántos mensajes puedo enviar por día?
+                </h3>
+                <p>
+                    Depende de la antigüedad y reputación de tu cuenta. Para cuentas nuevas, recomendamos no superar
+                    50-100 mensajes/día.
+                    Para cuentas establecidas, puedes llegar a 300-500 mensajes/día divididos en múltiples sesiones.
+                </p>
+
+                <h3 style="font-size: 1.3rem; margin-top: 30px; margin-bottom: 10px; color: var(--text-main);">
+                    ¿NovaFlow almacena mis datos o mensajes?
+                </h3>
+                <p>
+                    No. Toda la información se procesa localmente en tu navegador. NovaFlow no envía datos a servidores
+                    externos
+                    ni almacena información de tus contactos o mensajes.
+                </p>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../">Inicio</a>
+                <a href="#introduccion">Documentación</a>
+                <a href="#">Soporte</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+            </div>
+            <p>&copy; 2026 NovaFlow. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; opacity: 0.5; font-size: 0.8rem;">Versión Beta 1.0</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for sidebar links
+        document.querySelectorAll('.doc-nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                    // Update active state
+                    document.querySelectorAll('.doc-nav a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Update active link on scroll
+        const sections = document.querySelectorAll('section[id], h3[id]');
+        const navLinks = document.querySelectorAll('.doc-nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
