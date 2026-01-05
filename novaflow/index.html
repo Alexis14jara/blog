@@ -11,30 +11,12 @@
     <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/styles.css">
 
+    <!-- Firebase SDK (Compat) -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyCKNNldmWRDej0_m2Lonup4SUPjOqKhsh8",
-            authDomain: "novaflow-backend-a84e3.firebaseapp.com",
-            projectId: "novaflow-backend-a84e3",
-            storageBucket: "novaflow-backend-a84e3.firebasestorage.app",
-            messagingSenderId: "531939082742",
-            appId: "1:531939082742:web:8d30bedc41f58eca27c7d7"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-    </script>
+    <!-- Custom Firebase Logic -->
+    <script src="./assets/js/firebase-logic.js"></script>
 
     <style>
         /* Mobile Notification Modal */
@@ -269,7 +251,8 @@
                 reportes detallados desde tu navegador.</p>
 
             <div class="hero-buttons">
-                <a download="NovaFlow-Beta.zip" href="NovaFlow-Beta.zip" onclick="incrementarDescarga()" class="btn btn-primary">Descargar Extensión</a>
+                <a download="NovaFlow-Beta.zip" href="NovaFlow-Beta.zip" data-track-download="true"
+                    class="btn btn-primary">Descargar Extensión</a>
                 <a href="./documentacion/" class="btn btn-outline">Guía de Instalación</a>
             </div>
 
@@ -380,16 +363,7 @@
         </div>
     </footer>
 
-    <script>
-        function incrementarDescarga() {
-            const ref = db.collection("stats").doc("novaflow");
-
-            return ref.update({
-                downloads: firebase.firestore.FieldValue.increment(1),
-                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-            });
-        }
-    </script>
+    <!-- Firebase Counter Logic moved to assets/js/firebase-logic.js -->
 
 </body>
 
