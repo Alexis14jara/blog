@@ -121,6 +121,18 @@ ul {
   font-size: 0.85rem;
 }
 
+.nav-desktop .btn-sm {
+  background-color: var(--beige-dark);
+  color: var(--text-dark);
+  padding: 7px 18px;
+  border: 1px solid var(--beige);
+}
+
+.nav-desktop .btn-sm:hover {
+  background-color: transparent;
+  color: var(--beige);
+}
+
 /* --- HEADER & NAV --- */
 #main-header {
   position: fixed;
