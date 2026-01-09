@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /Error-302/
+Disallow: /novaflow/admin/
+Disallow: /novaflow/novaFlow-Beta.zip
+
+Sitemap: https://www.novinho.online/sitemap.xml
