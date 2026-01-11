@@ -208,51 +208,175 @@
             </div>
 
             <div class="portfolio-grid">
-                <div class="portfolio-item reveal-up">
-                    <div class="portfolio-thumb">
-                        <img class="portfolio-image" src="../assets/images/portfolio-3.png"
-                            alt="InoFisio - Landing Page">
-                        <div class="thumb-overlay">
-                            <a href="https://alexis14jara.github.io/InoFisioPreview/" class="btn-circle"><i
-                                    class="ph ph-arrow-up-right"></i></a>
+
+                <!--
+                ⚠️ GUÍA PARA AGREGAR PROYECTOS:
+                Recomiendo poner al principio y hacer el 4to paso.
+                1. Mantén solo 3 proyectos visibles principales (sin la clase "hidden-project").
+                2. El resto debe tener la clase "hidden-project" y "style='display: none;'".
+                3. Orden de animación para los primeros 3:
+                    - 1º: article class="project-card reveal-up"
+                    - 2º: article class="project-card reveal-up delay-1"
+                    - 3º: article class="project-card reveal-up delay-2"
+                4. Si agregas uno nuevo al principio, rota las clases delay y oculta el que quede en 4ta posición.
+                -->
+
+                <!-- Portafolio 6 -->
+
+                <article class="project-card reveal-up">
+                    <div class="card-image-wrapper">
+                        <img src="../assets/images/portfolio-6.png" alt="NovaMapScraper - Extension Chrome / Edge" class="card-image">
+                        <span class="status-badge status-pago">💰 Pay</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="feature-badge">Chrome / Edge Extension</span>
+                            <h3 class="card-title">NovaMapScraper</h3>
                         </div>
-                        <span class="thumb-cat">Landing Page</span>
-                    </div>
-                    <div class="portfolio-details">
-                        <h3>InoFisio</h3>
-                        <p>Professional website for physiotherapy clinic.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item reveal-up delay-1">
-                    <div class="portfolio-thumb">
-                        <img class="portfolio-image" src="../assets/images/portfolio-2.png"
-                            alt="MevoStore - E-commerce">
-                        <div class="thumb-overlay">
-                            <a href="https://alexis14jara.github.io/MevoStorePreview/" class="btn-circle"><i
-                                    class="ph ph-arrow-up-right"></i></a>
+                        <p class="card-description">NovaMapScraper is a tool that allows you to extract map information from Google Maps in CSV and XLSX format.</p>
+                        <div class="tech-stack">
+                            <span class="tech-pill">FULL JS</span>
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
                         </div>
-                        <span class="thumb-cat">E-Commerce</span>
-                    </div>
-                    <div class="portfolio-details">
-                        <h3>MevoStore</h3>
-                        <p>Modern e-commerce with conversion focus.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item reveal-up delay-2">
-                    <div class="portfolio-thumb">
-                        <img class="portfolio-image" src="../assets/images/portfolio-1.png"
-                            alt="PabloBarber - Landing Page">
-                        <div class="thumb-overlay">
-                            <a href="https://alexis14jara.github.io/PabloBarber/" class="btn-circle"><i
-                                    class="ph ph-arrow-up-right"></i></a>
+                        <div class="card-footer">
+                            <a href="https://wa.me/595983092018?text=Hola,%20me%20interesa%20tu%20herramienta%20NovaMapScraper" class="btn-card-action">Buy Extension <i class="ph-bold ph-arrow-right"></i></a>
                         </div>
-                        <span class="thumb-cat">Landing Page</span>
                     </div>
-                    <div class="portfolio-details">
-                        <h3>PabloBarber</h3>
-                        <p>Web for barber shop with urban identity and style.</p>
+                </article>
+
+                <!-- Portafolio 5 -->
+
+                <article class="project-card reveal-up delay-1">
+                    <div class="card-image-wrapper">
+                        <img src="../assets/images/portfolio-5.png" alt="NovaFlow PRO - Extensión Chrome / Edge" class="card-image">
+                        <span class="status-badge status-open-source">🧩 Open Source</span>
                     </div>
-                </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="feature-badge">Chrome / Edge Extension</span>
+                            <h3 class="card-title">NovaFlow PRO</h3>
+                        </div>
+                        <p class="card-description">The ultimate tool for managing bulk WhatsApp Web messages. Complete control over timing, security, and detailed reports, all from your browser.</p>
+                        <div class="tech-stack">
+                            <span class="tech-pill">FULL JS</span>
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Alexis14jara/NovaFlowPRO.git" class="btn-card-action">View
+                                Project <i class="ph-bold ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Portafolio 4 -->
+
+                <article class="project-card reveal-up delay-2">
+                    <div class="card-image-wrapper">
+                        <img src="../assets/images/portfolio-4.png" alt="AlnexStudio - Landing Page" class="card-image">
+                        <span class="status-badge status-live">🚀 Live</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="feature-badge">Modern Landing Page</span>
+                            <h3 class="card-title">AlnexStudio</h3>
+                        </div>
+                        <p class="card-description">Landing page for a web development and digital services agency with a modern visual identity.</p>
+                        <div class="tech-stack">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">JavaScript</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://alnexstudio.github.io/home/" class="btn-card-action">View Project
+                                <i class="ph-bold ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Portafolio 3 -->
+
+                <article class="project-card hidden-project" style="display: none;">
+                    <div class="card-image-wrapper">
+                        <img src="../assets/images/portfolio-3.png" alt="InoFisio - Landing Page" class="card-image">
+                        <span class="status-badge status-live">🚀 Live</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="feature-badge">Landing Page</span>
+                            <h3 class="card-title">InoFisio</h3>
+                        </div>
+                        <p class="card-description">Professional website for physiotherapy clinic focused on trust and
+                            clarity.</p>
+                        <div class="tech-stack">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">JavaScript</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://alexis14jara.github.io/InoFisioPreview/" class="btn-card-action">View
+                                Project <i class="ph-bold ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Portafolio 2 -->
+
+                <article class="project-card hidden-project" style="display: none;">
+                    <div class="card-image-wrapper">
+                        <img src="../assets/images/portfolio-2.png" alt="MevoStore - E-commerce" class="card-image">
+                        <span class="status-badge status-live">🚀 Live</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="feature-badge">Landing page Urban Style</span>
+                            <h3 class="card-title">MevoStore</h3>
+                        </div>
+                        <p class="card-description">Modern e-commerce optimized for sales and user experience. A well-known store in Paraguay.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">JavaScript</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://alexis14jara.github.io/MevoStorePreview/" class="btn-card-action">View
+                                Project <i class="ph-bold ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Portafolio 1 -->
+
+                <article class="project-card hidden-project" style="display: none;">
+                    <div class="card-image-wrapper">
+                        <img src="../assets/images/portfolio-1.png" alt="PabloBarber - Landing Page" class="card-image">
+                        <span class="status-badge status-live">🚀 Live</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="feature-badge">Landing page Urban Style</span>
+                            <h3 class="card-title">PabloBarber</h3>
+                        </div>
+                        <p class="card-description">Landing page for barber shop with strong visual identity and booking
+                            system.</p>
+                        <div class="tech-stack">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">JavaScript</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://alexis14jara.github.io/PabloBarber/" class="btn-card-action">View Project
+                                <i class="ph-bold ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more-container reveal-up">
+                <button id="load-more-btn" class="btn btn-outline">See more projects <i
+                        class="ph-bold ph-caret-down"></i></button>
             </div>
         </div>
     </section>
