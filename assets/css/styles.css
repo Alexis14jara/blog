@@ -781,6 +781,12 @@ h1 {
     border: 1px solid rgba(242, 90, 90, 0.3);
 }
 
+.status-license {
+    background: rgba(222, 194, 82, 0.2);
+    color: #f2db5a;
+    border: 1px solid rgba(242, 194, 90, 0.3);
+}
+
 /* Card Content */
 .card-content {
     padding: 28px;
