@@ -1,0 +1,215 @@
+/* --- ESTILOS REUTILIZABLES PARA BLOG POSTS --- */
+
+/* Hereda variables del root principal, asegúrate de importar el css principal antes que este */
+:root {
+    --content-width: 800px;
+    --font-heading: "Outfit", sans-serif;
+    --font-body:
+        "Outfit", sans-serif; /* O una serif si prefieres para lectura */
+    --font-code: "Space Mono", monospace;
+}
+
+/* --- 1. HERO DEL POST --- */
+.post-hero {
+    padding: 140px 0 60px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.post-meta {
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    color: var(--beige);
+    margin-bottom: 20px;
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: var(--text-white);
+    margin-bottom: 30px;
+}
+
+.post-cover-wrapper {
+    width: 100%;
+    margin-top: 40px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16/9;
+}
+
+.post-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- 2. CONTENIDO DEL POST --- */
+.post-content {
+    max-width: var(--content-width);
+    margin: 80px auto 120px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #cccccc; /* Gris claro para lectura */
+}
+
+/* Tipografía en Contenido */
+.post-content h2 {
+    font-size: 2rem;
+    color: var(--text-white);
+    margin-top: 60px;
+    margin-bottom: 25px;
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+    color: var(--beige);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.post-content p {
+    margin-bottom: 25px;
+}
+
+.post-content strong {
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+.post-content a {
+    color: var(--beige);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.post-content a:hover {
+    color: var(--text-white);
+}
+
+/* --- 3. COMPONENTES REUTILIZABLES --- */
+
+/* Cita Destacada */
+.post-quote {
+    border-left: 4px solid var(--beige);
+    padding-left: 30px;
+    margin: 50px 0;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--text-white);
+    background: linear-gradient(90deg, rgba(230, 216, 195, 0.05), transparent);
+    padding: 30px;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* Listas estéticas */
+.post-list {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.post-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.post-list li::before {
+    content: "•";
+    color: var(--beige);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Bloque de Código */
+.code-block {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    overflow-x: auto;
+    color: #e0e0e0;
+    margin: 30px 0;
+}
+
+/* Caja de Nota/Tip */
+.info-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: var(--radius-md);
+    margin: 40px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    color: var(--beige);
+}
+
+/* --- 4. AUTHOR BIO --- */
+.author-bio {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--beige);
+}
+
+.author-info h4 {
+    color: var(--text-white);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.author-info p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: var(--text-gray);
+}
+
+/* --- 5. RESPONSIVE --- */
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2.2rem;
+    }
+
+    .post-hero {
+        padding-top: 120px;
+    }
+
+    .post-content {
+        margin-top: 40px;
+        font-size: 1.05rem;
+    }
+
+    .author-bio {
+        flex-direction: column;
+        text-align: center;
+    }
+}

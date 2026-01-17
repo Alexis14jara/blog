@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- 3. ANIMACIONES AL SCROLLEAR (Intersection Observer) ---
     // Selecciona todos los elementos con clases de animación
     const animatedElements = document.querySelectorAll(
-        ".fade-in, .reveal-up, .reveal-left, .reveal-right"
+        ".fade-in, .reveal-up, .reveal-left, .reveal-right",
     );
 
     const observerOptions = {
@@ -141,20 +141,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const category = btn.getAttribute("data-category");
 
+                let visibleCount = 0;
+
                 portfolioItems.forEach((item) => {
                     // Asumimos que el item tiene un atributo data-category o usamos el texto del span
                     const itemCategory = item.getAttribute("data-category");
 
                     if (category === "all" || itemCategory === category) {
-                        item.style.display = "block";
+                        item.style.display = "flex";
                         // Reiniciar animación
                         item.classList.remove("reveal-up");
                         void item.offsetWidth; // Trigger reflow
                         item.classList.add("reveal-up");
+                        visibleCount++;
                     } else {
                         item.style.display = "none";
                     }
                 });
+
+                // Manejar mensaje de No Resultados
+                const noResultsMsg =
+                    document.getElementById("no-results-message");
+                const noResultsCat = document.getElementById("no-results-cat");
+
+                if (noResultsMsg) {
+                    if (visibleCount === 0) {
+                        noResultsMsg.style.display = "block";
+                        if (noResultsCat) {
+                            // Usar el texto del botón presionado
+                            noResultsCat.textContent = btn.textContent;
+                        }
+                    } else {
+                        noResultsMsg.style.display = "none";
+                    }
+                }
             });
         });
     }
