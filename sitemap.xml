@@ -24,32 +24,8 @@
   
   <!-- Blog Posts -->
   <url>
-    <loc>https://www.novinho.online/blog/posts/front-end/tailwindcss-vs-bootstrap.html</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.novinho.online/blog/posts/noticias/ultimas-actualizaciones-de-frameworks-populares.html</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.novinho.online/blog/posts/opinion/como-organizar-tu-flujo-de-trabajo.html</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.novinho.online/blog/posts/seo-web/guia-para-optimizar-velocidad-de-carga.html</loc>
-    <lastmod>2026-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.novinho.online/blog/posts/tutoriales/crear-un-portafolio-profesional.html</loc>
-    <lastmod>2026-01-09</lastmod>
+    <loc>https://www.novinho.online/blog/post/MiViajeComoFreelancer/</loc>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
