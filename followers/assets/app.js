@@ -18,6 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Back-to-top button ────────────────────── */
   const backToTop = document.getElementById('backToTop');
 
+  function updateBackToTop() {
+    if (window.scrollY > 400) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
     }
   }
 
