@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Conoce más sobre Alexis Jara (Novinho Dev) - Su historia, trayectoria y filosofía en el desarrollo de software y diseño web.">
+    <meta name="author" content="Novinho Dev (Alexis Jara)">
+    <title>Sobre Mí | Novinho Dev</title>
+
+    <!-- SEO & Canonical -->
+    <link rel="canonical" href="https://www.novinho.online/about-me/" />
+
+    <!-- Estilos compartidos -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Iconos y Fuentes -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../favicon-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../favicon-dark.svg" media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+
+    <!-- RUIDO DE TEXTURA -->
+    <div class="noise-overlay"></div>
+
+    <!-- CABECERA (NAVBAR) -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                Novinho<span class="logo-dev">Dev</span><span class="logo-guion">_</span>
+            </a>
+
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="../index.html#hero">Inicio</a></li>
+                    <li><a href="../index.html#about">Sobre Mí</a></li>
+                    <li><a href="../index.html#skills">Habilidades</a></li>
+                    <li><a href="../index.html#portfolio">Proyectos</a></li>
+                    <li><a href="../blog/">Blog</a></li>
+                </ul>
+                <a href="../index.html#contact" class="btn btn-sm">Hablemos</a>
+            </nav>
+
+            <div class="hamburger-wrapper">
+                <div class="hamburger" id="hamburger-btn">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENÚ MÓVIL (Interacciones controladas por app.js) -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav-list">
+                <a href="../index.html#hero" class="mobile-link">
+                    <span class="nav-num">01</span>
+                    <span class="nav-text">Inicio</span>
+                </a>
+                <a href="../index.html#about" class="mobile-link">
+                    <span class="nav-num">02</span>
+                    <span class="nav-text">Sobre Mí</span>
+                </a>
+                <a href="../index.html#skills" class="mobile-link">
+                    <span class="nav-num">03</span>
+                    <span class="nav-text">Habilidades</span>
+                </a>
+                <a href="../index.html#portfolio" class="mobile-link">
+                    <span class="nav-num">04</span>
+                    <span class="nav-text">Portafolio</span>
+                </a>
+                <a href="../blog/" class="mobile-link">
+                    <span class="nav-num">05</span>
+                    <span class="nav-text">Blog</span>
+                </a>
+                <a href="../index.html#contact" class="mobile-link">
+                    <span class="nav-num">06</span>
+                    <span class="nav-text">Contacto</span>
+                </a>
+            </nav>
+            <div class="mobile-footer">
+                <div class="separator"></div>
+                <div class="social-links-minimal">
+                    <a href="#">LN</a>
+                    <a href="https://github.com/Alexis14jara">GH</a>
+                    <a href="#">IG</a>
+                </div>
+                <p class="menu-email">novinhodev@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- SECCIÓN 1: HERO (TÍTULO DE LA PÁGINA) -->
+        <section class="story-hero">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-glow"></div>
+            <div class="container story-hero-content">
+                <span class="section-tag fade-in">Mi Historia</span>
+                <h1 class="fade-in delay-1">Más allá del <span class="text-beige">código.</span></h1>
+                <p class="fade-in delay-2">Un recorrido por las ideas, hitos y filosofía que definen mi trabajo y visión digital.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: HISTORIA E IMAGEN (DISEÑO NORMAL - IMAGEN IZQUIERDA / TEXTO DERECHA) -->
+        <section class="story-section">
+            <div class="container">
+                <div class="story-grid">
+                    <!-- Columna de Imagen -->
+                    <div class="story-image-col reveal-left">
+                        <div class="image-frame">
+                            <!-- Puedes reemplazar con tu imagen usando la clase story-imagen -->
+                            <img src="../assets/images/about-image.JPG" alt="Alexis Jara trabajando en diseño web paraguay">
+                        </div>
+                    </div>
+                    <!-- Columna de Texto -->
+                    <div class="story-text reveal-right">
+                        <span class="section-tag">01. Los Inicios</span>
+                        <h3>El origen de la pasión</h3>
+                        <p>Toda gran solución comienza con una pregunta simple. Mi curiosidad por cómo funcionaban los sitios web y las interfaces interactivas me llevó a dar mis primeros pasos en la programación.</p>
+                        <p>Desde entonces, he estado comprometido en perfeccionar no solo mis habilidades técnicas, sino también mi entendimiento de la <strong>experiencia humana</strong> frente a la pantalla.</p>
+                        
+                        <!-- Caja de resaltado reusable -->
+                        <div class="highlight-box">
+                            <p>"La tecnología es mejor cuando une a la gente. Diseñar con empatía es la única forma de crear software que trascienda."</p>
+                        </div>
+
+                        <p>Esta filosofía me guía en cada proyecto que asumo, asegurando que cada línea de código tenga un propósito claro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: HISTORIA E IMAGEN REVERSO (IMAGEN DERECHA / TEXTO IZQUIERDA) -->
+        <section class="story-section bg-alternate">
+            <div class="container">
+                <div class="story-grid reverse">
+                    <!-- Columna de Imagen (En HTML se mantiene el orden, la clase .reverse de CSS se encarga del orden visual) -->
+                    <div class="story-image-col reveal-right">
+                        <div class="image-frame">
+                            <img src="../assets/images/portfolio-6.png" alt="Proceso de diseño y prototipado">
+                        </div>
+                    </div>
+                    <!-- Columna de Texto -->
+                    <div class="story-text reveal-left">
+                        <span class="section-tag">02. El Enfoque</span>
+                        <h3>Buscando el balance perfecto</h3>
+                        <p>Para mí, el desarrollo web no se trata de elegir entre la estética y el rendimiento. Los sitios más memorables logran un equilibrio perfecto entre un diseño visual exquisito y una arquitectura de código rápida y limpia.</p>
+                        <p>Me especializo en <strong>Front-End</strong>, pero mantengo una comprensión profunda de cómo se conectan los datos y la lógica en el backend para dar soporte a interfaces sumamente fluidas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: LÍNEA DE TIEMPO (TIMELINE VERTICAL) -->
+        <section class="story-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">03. Hitos</span>
+                    <h2 class="reveal-up">Mi Trayectoria</h2>
+                </div>
+
+                <div class="story-timeline reveal-up delay-1">
+                    <!-- Hito 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-year">2024 - Presente</span>
+                        <div class="timeline-content">
+                            <h4>Desarrollador Front-End Independiente</h4>
+                            <p>Creación de sitios web premium y aplicaciones a medida para clientes locales e internacionales. Enfoque exclusivo en rendimiento y animaciones interactivas modernas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hito 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-year">2022 - 2023</span>
+                        <div class="timeline-content">
+                            <h4>Especialización en UI/UX & React</h4>
+                            <p>Consolidación del stack moderno de interfaces dinámicas, implementando patrones de diseño avanzados y flujos de trabajo eficientes para startups.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hito 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-year">2020</span>
+                        <div class="timeline-content">
+                            <h4>El Primer Píxel</h4>
+                            <p>Inicio en el mundo del desarrollo web autodidacta. Primeros proyectos escolares y personales usando lenguajes base y maquetación responsiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: CITA RESALTADA (QUOTE BANNER) -->
+        <section class="story-section bg-alternate">
+            <div class="container">
+                <div class="story-quote-banner reveal-up">
+                    <div class="story-quote-icon">
+                        <i class="ph ph-quotes"></i>
+                    </div>
+                    <blockquote>
+                        "No diseñamos pantallas. Diseñamos las conversaciones que la gente tiene con tus productos."
+                    </blockquote>
+                    <span class="story-quote-author">— Alexis Jara (NovinhoDev)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: TARJETAS DE VALORES (GRID CARDS) -->
+        <section class="story-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">04. Filosofía</span>
+                    <h2 class="reveal-up">Principios Fundacionales</h2>
+                </div>
+
+                <div class="story-cards-grid reveal-up delay-1">
+                    <!-- Tarjeta 1 -->
+                    <div class="story-card-item">
+                        <span class="story-card-num">01/</span>
+                        <h4>Estética Funcional</h4>
+                        <p>El diseño visual no es solo adorno; debe guiar al usuario intuitivamente. Cada color y animación tiene un propósito claro.</p>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="story-card-item">
+                        <span class="story-card-num">02/</span>
+                        <h4>Código Limpio</h4>
+                        <p>Escribo código modular, semántico y fácil de mantener. Tu sitio no solo se verá bien ahora, sino que crecerá contigo mañana.</p>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="story-card-item">
+                        <span class="story-card-num">03/</span>
+                        <h4>Empatía y Foco</h4>
+                        <p>Escucho activamente y me sumerjo en los objetivos de tu negocio para construir la mejor versión de tu visión digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo footer-logo">NovinhoDev_</a>
+                    <p>Creando el futuro digital, un píxel a la vez.</p>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="../index.html#hero">Inicio</a></li>
+                        <li><a href="../index.html#about">Sobre Mí</a></li>
+                        <li><a href="../index.html#portfolio">Portafolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Desarrollo Web</a></li>
+                        <li><a href="#">Diseño UI/UX</a></li>
+                        <li><a href="#">Software a medida</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Boletín</h4>
+                    <p>Novedades tech y recursos.</p>
+                    <form class="newsletter-input">
+                        <input type="email" placeholder="tu@email.com">
+                        <button type="submit"><i class="ph ph-paper-plane-right"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="big-text">NOVINHO</div>
+                <div class="bottom-bar">
+                    <p>&copy; 2026 NovinhoDev. Todos los derechos reservados.</p>
+                    <div class="socials">
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="https://github.com/Alexis14jara"><i class="ph ph-github-logo"></i></a>
+                        <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/595983092018?text=Hola!%20Vi%20tu%20portafolio%20y%20me%20gustaría%20consultar%20sobre%20un%20proyecto%20web."
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="wa-icon">
+            <path fill="currentColor"
+                d="M19.11 17.44c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.58-.48-.5-.66-.51h-.56c-.2 0-.51.07-.78.37-.27.29-1.02.99-1.02 2.41s1.05 2.8 1.2 3c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.37.24-.66.24-1.22.17-1.34-.07-.12-.27-.2-.56-.34z" />
+        </svg>
+    </a>
+
+    <!-- WIDGET FLOTANTE IDIOMA -->
+    <div class="lang-float-container">
+        <button class="lang-toggle-btn" aria-label="Cambiar Idioma">
+            <i class="ph ph-translate"></i>
+        </button>
+        <div class="lang-options">
+            <a href="#" class="lang-option active">ES</a>
+            <!-- Link al home en ingles ya que es un sitio single-page, o puedes personalizarlo -->
+            <a href="../en/" class="lang-option">EN</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>

@@ -133,6 +133,57 @@ ul {
     color: var(--beige);
 }
 
+/* Botón llamativo (Highlight) con efecto de brillo y hover premium */
+.btn-highlight {
+    background: linear-gradient(135deg, var(--beige) 0%, var(--beige-dark) 100%);
+    color: var(--text-dark);
+    border: 1px solid var(--beige);
+    box-shadow: 0 4px 15px rgba(230, 216, 195, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: 0.6s ease;
+    z-index: -1;
+}
+
+.btn-highlight:hover::before {
+    left: 100%;
+}
+
+.btn-highlight:hover {
+    color: var(--text-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(230, 216, 195, 0.35);
+}
+
+.btn-highlight i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-highlight:hover i {
+    transform: translateX(4px);
+}
+
 /* --- HEADER & NAV --- */
 #main-header {
     position: fixed;
@@ -1678,6 +1729,318 @@ details[open] .faq-icon i {
     }
     .blog-info-col h2 {
         font-size: 2.3rem;
+    }
+}
+
+/* ==========================================================================
+   --- 6. CLASES DE DISEÑO PARA HISTORIA / SOBRE MÍ (REUTILIZABLES) ---
+   ========================================================================== */
+
+/* Hero Especial de Historia */
+.story-hero {
+    position: relative;
+    padding: 160px 0 100px;
+    background: var(--bg-dark);
+    text-align: center;
+    overflow: hidden;
+}
+
+.story-hero .hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center top;
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.story-hero .hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(230, 216, 195, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.story-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.story-hero p {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contenedores Genéricos de Secciones de Historia */
+.story-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.story-section.bg-alternate {
+    background: #050505;
+}
+
+/* Grid de Historia */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.story-grid.reverse {
+    direction: rtl; /* Para alternar columnas */
+}
+
+.story-grid.reverse > * {
+    direction: ltr; /* Restaurar dirección de texto */
+}
+
+/* Columna de Texto de Historia */
+.story-text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.story-text p {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.story-text p strong {
+    color: var(--text-white);
+}
+
+.story-text .highlight-box {
+    background: rgba(230, 216, 195, 0.03);
+    border-left: 3px solid var(--beige);
+    padding: 20px 25px;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 30px 0;
+}
+
+.story-text .highlight-box p {
+    margin-bottom: 0;
+    font-style: italic;
+    color: var(--beige);
+}
+
+/* Columna de Imagen de Historia */
+.story-image-col {
+    position: relative;
+    width: 100%;
+}
+
+.story-image-col .image-frame {
+    height: 450px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    background: #111;
+}
+
+.story-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.story-image-col:hover img {
+    transform: scale(1.05);
+}
+
+/* Componente de Línea de Tiempo (Timeline) */
+.story-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding-left: 30px;
+}
+
+.story-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--beige) 0%, rgba(230, 216, 195, 0.1) 100%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg-dark);
+    border: 3px solid var(--beige);
+    box-shadow: 0 0 10px rgba(230, 216, 195, 0.5);
+    transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-marker {
+    background: var(--beige);
+    transform: scale(1.2);
+}
+
+.timeline-year {
+    font-family: var(--font-mono);
+    color: var(--beige);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-white);
+}
+
+.timeline-content p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Tarjeta Destacada de Historia (Grid Cards) */
+.story-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.story-card-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 35px;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.story-card-item:hover {
+    border-color: var(--beige);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.story-card-num {
+    font-family: var(--font-mono);
+    color: var(--beige);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.story-card-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: var(--text-white);
+}
+
+.story-card-item p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Banner de Citas (Quote) */
+.story-quote-banner {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    position: relative;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(230, 216, 195, 0.02) 0%, rgba(20, 20, 20, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.story-quote-icon {
+    font-size: 3rem;
+    color: var(--beige-translucent);
+    margin-bottom: 20px;
+}
+
+.story-quote-banner blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text-white);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: var(--font-main);
+}
+
+.story-quote-author {
+    font-family: var(--font-mono);
+    color: var(--beige);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Ajustes Responsive para Clases de Historia */
+@media (max-width: 1024px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .story-grid.reverse {
+        direction: ltr; /* Desactivar reverse en tablet */
+    }
+    .story-image-col .image-frame {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-section {
+        padding: 70px 0;
+    }
+    .story-text h3 {
+        font-size: 1.8rem;
+    }
+    .story-quote-banner blockquote {
+        font-size: 1.2rem;
     }
 }
 
