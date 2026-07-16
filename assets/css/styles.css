@@ -1736,6 +1736,210 @@ details[open] .faq-icon i {
    --- 6. CLASES DE DISEÑO PARA HISTORIA / SOBRE MÍ (REUTILIZABLES) ---
    ========================================================================== */
 
+/* Botón Volver en Cabecera */
+.btn-back {
+    background-color: var(--beige-dark);
+    color: var(--text-dark);
+    border: 1px solid var(--beige);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-back:hover {
+    background-color: transparent;
+    color: var(--beige);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .btn-back {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+}
+
+/* Footer de 3 columnas para subpáginas sin navegación */
+.footer-top-3col {
+    grid-template-columns: 2fr 1fr 2fr;
+}
+
+@media (max-width: 1024px) {
+    .footer-top-3col {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top-3col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sección de Perfil / Presentación Centrada */
+.profile-intro-section {
+    padding: 80px 0 70px;
+}
+
+/* Cuando es la primera sección (sin hero), compensa el header fijo */
+.profile-intro-section--top {
+    padding-top: 500px;
+}
+
+#intro-profile {
+    padding-top: 100px;
+}
+
+.profile-intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+    gap: 28px;
+}
+
+/* Avatar circular con anillo y punto de estado */
+.profile-avatar {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(230, 216, 195, 0.25);
+    box-shadow: 0 0 0 6px rgba(230, 216, 195, 0.05), 0 16px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-avatar:hover img {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 8px rgba(230, 216, 195, 0.12), 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Punto verde de disponibilidad */
+.profile-status-dot {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    background: #4ade80;
+    border-radius: 50%;
+    border: 3px solid #050505;
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+    animation: pulse-dot 2.5s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 6px rgba(74, 222, 128, 0.5); }
+    50% { box-shadow: 0 0 14px rgba(74, 222, 128, 0.9); }
+}
+
+/* Nombre y chips de rol */
+.profile-identity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.profile-identity h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.profile-roles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.profile-role-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 16px;
+    background: rgba(230, 216, 195, 0.05);
+    border: 1px solid rgba(230, 216, 195, 0.15);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--beige);
+    font-family: var(--font-mono);
+    transition: var(--transition);
+}
+
+.profile-role-chip:hover {
+    background: rgba(230, 216, 195, 0.1);
+    border-color: var(--beige);
+}
+
+/* Párrafos de bio */
+.profile-bio p {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.profile-bio p:last-child {
+    margin-bottom: 0;
+}
+
+.profile-bio strong {
+    color: var(--text-white);
+}
+
+/* Divisor decorativo */
+.profile-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 320px;
+    margin-top: 8px;
+}
+
+.profile-divider span {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(230, 216, 195, 0.2), transparent);
+}
+
+.profile-divider i {
+    color: var(--beige);
+    font-size: 1.1rem;
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-avatar {
+        width: 110px;
+        height: 110px;
+    }
+    .profile-bio p {
+        font-size: 0.97rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-role-chip {
+        font-size: 0.78rem;
+        padding: 6px 12px;
+    }
+}
+
 /* Hero Especial de Historia */
 .story-hero {
     position: relative;

@@ -36,76 +36,112 @@
                 Novinho<span class="logo-dev">Dev</span><span class="logo-guion">_</span>
             </a>
 
-            <nav class="nav-desktop">
-                <ul>
-                    <li><a href="../index.html#hero">Inicio</a></li>
-                    <li><a href="../index.html#about">Sobre Mí</a></li>
-                    <li><a href="../index.html#skills">Habilidades</a></li>
-                    <li><a href="../index.html#portfolio">Proyectos</a></li>
-                    <li><a href="../blog/">Blog</a></li>
-                </ul>
-                <a href="../index.html#contact" class="btn btn-sm">Hablemos</a>
-            </nav>
-
-            <div class="hamburger-wrapper">
-                <div class="hamburger" id="hamburger-btn">
-                    <span class="line line-1"></span>
-                    <span class="line line-2"></span>
-                </div>
-            </div>
+            <a href="../index.html" class="btn btn-sm btn-back">
+                <i class="ph ph-arrow-left"></i> Volver
+            </a>
         </div>
     </header>
 
-    <!-- MENÚ MÓVIL (Interacciones controladas por app.js) -->
-    <div class="mobile-menu-overlay" id="mobile-menu">
-        <div class="mobile-menu-content">
-            <nav class="mobile-nav-list">
-                <a href="../index.html#hero" class="mobile-link">
-                    <span class="nav-num">01</span>
-                    <span class="nav-text">Inicio</span>
-                </a>
-                <a href="../index.html#about" class="mobile-link">
-                    <span class="nav-num">02</span>
-                    <span class="nav-text">Sobre Mí</span>
-                </a>
-                <a href="../index.html#skills" class="mobile-link">
-                    <span class="nav-num">03</span>
-                    <span class="nav-text">Habilidades</span>
-                </a>
-                <a href="../index.html#portfolio" class="mobile-link">
-                    <span class="nav-num">04</span>
-                    <span class="nav-text">Portafolio</span>
-                </a>
-                <a href="../blog/" class="mobile-link">
-                    <span class="nav-num">05</span>
-                    <span class="nav-text">Blog</span>
-                </a>
-                <a href="../index.html#contact" class="mobile-link">
-                    <span class="nav-num">06</span>
-                    <span class="nav-text">Contacto</span>
-                </a>
-            </nav>
-            <div class="mobile-footer">
-                <div class="separator"></div>
-                <div class="social-links-minimal">
-                    <a href="#">LN</a>
-                    <a href="https://github.com/Alexis14jara">GH</a>
-                    <a href="#">IG</a>
-                </div>
-                <p class="menu-email">novinhodev@gmail.com</p>
-            </div>
-        </div>
-    </div>
-
     <main>
-        <!-- SECCIÓN 1: HERO (TÍTULO DE LA PÁGINA) -->
-        <section class="story-hero">
-            <div class="hero-bg-grid"></div>
-            <div class="hero-glow"></div>
-            <div class="container story-hero-content">
-                <span class="section-tag fade-in">Mi Historia</span>
-                <h1 class="fade-in delay-1">Más allá del <span class="text-beige">código.</span></h1>
-                <p class="fade-in delay-2">Un recorrido por las ideas, hitos y filosofía que definen mi trabajo y visión digital.</p>
+        <!-- SECCIÓN PERFIL: PRESENTACIÓN CENTRADA -->
+        <section id="intro-profile" class="story-section profile-intro-section profile-intro-section--top bg-alternate">
+            <div class="container">
+                <div class="profile-intro-wrapper reveal-up">
+
+                    <!-- Foto de perfil -->
+                    <div class="profile-avatar">
+                        <img src="../assets/images/about-image.JPG" alt="Alexis Jara - NovinhoDev">
+                        <span class="profile-status-dot"></span>
+                    </div>
+
+                    <!-- Nombre y rol -->
+                    <div class="profile-identity">
+                        <h2>Alexis <span class="text-beige">Jara</span></h2>
+                        <div class="profile-roles">
+                            <span class="profile-role-chip"><i class="ph ph-code"></i> Desarrollador Front-End</span>
+                            <span class="profile-role-chip"><i class="ph ph-paint-brush"></i> Diseñador UI/UX</span>
+                            <span class="profile-role-chip"><i class="ph ph-map-pin"></i> Paraguay</span>
+                        </div>
+                    </div>
+
+                    <!-- Bio breve -->
+                    <div class="profile-bio">
+                        <p>
+                            Soy <strong>Alexis Jara</strong>, aunque en internet me conocen como NovinhoDev.
+                        </p>
+                        <p>
+                            Desde muy pequeño sentí una conexión especial con la tecnología. 
+                            Crecí en un entorno donde el avance tecnológico era constante, 
+                            en gran parte gracias a mi padre, quien es técnico y con quien pasaba gran parte de mi tiempo. 
+                            Él dedicaba sus momentos libres a la robótica, y fue ahí donde nació mi curiosidad por crear.
+                        </p>
+                        <p>
+                            Siempre fui alguien inquieto, con una necesidad constante de construir cosas. 
+                            Desarmaba dispositivos electrónicos solo para entender cómo funcionaban y, 
+                            en muchos casos, intentar crear los míos propios. Experimentar, 
+                            aprender y crear no solo era un hobby, era mi forma de ver el mundo.
+                        </p>
+                        <p>
+                            Con el tiempo entendí que existía algo aún más profundo que lo físico. 
+                            Un espacio donde las únicas limitaciones eran las ideas. Así fue como descubrí 
+                            la programación: un universo donde puedes construir prácticamente 
+                            cualquier cosa desde cero. Ese fue el punto de quiebre que transformó mi pasión.
+                        </p>
+                        <p>
+                            A los 15 años obtuve una beca para estudiar de forma online en EGG Cooperation, 
+                            una experiencia que marcó un antes y un después en mi camino. Allí aprendí los fundamentos, 
+                            la lógica de programación y, sobre todo, confirmé la enorme pasión que siento por este mundo.
+                        </p>
+                        <p>
+                            Paralelamente, comenzó a interesarme otro campo que muchas veces es malinterpretado: 
+                            el hacking. Lejos de la percepción negativa que suele tener, 
+                            descubrí el hacking ético como una disciplina enfocada en la seguridad y 
+                            el conocimiento profundo de los sistemas. Aprendí a manejar la línea de comandos, 
+                            sistemas Linux y eventualmente trabajé con Kali Linux, especializándome en entornos de pentesting.
+                        </p>
+                        <p>
+                            Hoy en día, una de mis principales áreas de enfoque es el desarrollo web. 
+                            Gracias a mi experiencia en diseño gráfico, he logrado integrar estética y funcionalidad, 
+                            creando interfaces limpias, intuitivas y bien pensadas. 
+                            El diseño UI/UX es una parte fundamental de mi trabajo, y esta misma página es un reflejo de ello.
+                        </p>
+                        <p>
+                            Podría decirse que soy una persona “todoterreno”. 
+                            A lo largo de mi vida también adquirí experiencia en distintas áreas como 
+                            reparación de electrodomésticos, electricidad, carpintería, mecánica y más. 
+                            Todo esto ha aportado a mi forma de pensar: resolver problemas, 
+                            adaptarme y crear soluciones desde distintos ángulos.
+                        </p>
+                        <p>
+                            Actualmente me considero alguien en constante evolución, 
+                            con experiencia en desarrollo de software, desarrollo web, pentesting, 
+                            diseño y un área que destaca especialmente en mí: el OSINT (Open Source Intelligence). 
+                            Me apasiona investigar y analizar información, entendiendo a fondo organizaciones o 
+                            personas a partir de datos públicos. Esto es algo que algunos amigos cercanos lo confirman 
+                            con un poco de humor, ya que a veces dicen que soy "un poco acosador", pero en el buen sentido.
+                            A la primera semana me llama la atención una organización o persona, y en la siguiente semana 
+                            ya tengo bastante información sobre esa organización o persona. Pero es un vicio sano, lo juro.
+                        </p>
+                        <p>
+                            No me considero alguien que ya lo sabe todo, ni mucho menos. 
+                            Sé que aún me queda un largo camino por recorrer. 
+                            Mi objetivo es especializarme profundamente en un área, 
+                            pero mientras tanto, sigo explorando, aprendiendo y construyendo.
+                        </p>
+                        <p>
+                            Si llegaste hasta aquí, realmente te lo agradezco. 
+                            Eso significa que te tomaste el tiempo de conocer mi historia, y para mí, eso ya tiene mucho valor.
+                        </p>
+                    </div>
+
+                    <!-- Divisor decorativo -->
+                    <div class="profile-divider">
+                        <span></span>
+                        <i class="ph ph-sparkle"></i>
+                        <span></span>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -124,7 +160,7 @@
                     <div class="story-text reveal-right">
                         <span class="section-tag">01. Los Inicios</span>
                         <h3>El origen de la pasión</h3>
-                        <p>Toda gran solución comienza con una pregunta simple. Mi curiosidad por cómo funcionaban los sitios web y las interfaces interactivas me llevó a dar mis primeros pasos en la programación.</p>
+                        <p>Toda gran pasión tiene un origen, y la mía nació desde la curiosidad. Desde pequeño no solo quería usar la tecnología, quería entenderla. Desarmar dispositivos, experimentar y crear se volvió parte de mi día a día, hasta que descubrí un mundo donde las únicas limitaciones eran las ideas: la programación.</p>
                         <p>Desde entonces, he estado comprometido en perfeccionar no solo mis habilidades técnicas, sino también mi entendimiento de la <strong>experiencia humana</strong> frente a la pantalla.</p>
                         
                         <!-- Caja de resaltado reusable -->
@@ -171,7 +207,7 @@
                     <!-- Hito 1 -->
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
-                        <span class="timeline-year">2024 - Presente</span>
+                        <span class="timeline-year">2026 - Presente</span>
                         <div class="timeline-content">
                             <h4>Desarrollador Front-End Independiente</h4>
                             <p>Creación de sitios web premium y aplicaciones a medida para clientes locales e internacionales. Enfoque exclusivo en rendimiento y animaciones interactivas modernas.</p>
@@ -253,19 +289,10 @@
     <!-- PIE DE PÁGINA (FOOTER) -->
     <footer id="footer">
         <div class="container">
-            <div class="footer-top">
+            <div class="footer-top footer-top-3col">
                 <div class="footer-brand">
                     <a href="../index.html" class="logo footer-logo">NovinhoDev_</a>
                     <p>Creando el futuro digital, un píxel a la vez.</p>
-                </div>
-
-                <div class="footer-links-group">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="../index.html#hero">Inicio</a></li>
-                        <li><a href="../index.html#about">Sobre Mí</a></li>
-                        <li><a href="../index.html#portfolio">Portafolio</a></li>
-                    </ul>
                 </div>
 
                 <div class="footer-links-group">
@@ -309,18 +336,6 @@
                 d="M19.11 17.44c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.58-.48-.5-.66-.51h-.56c-.2 0-.51.07-.78.37-.27.29-1.02.99-1.02 2.41s1.05 2.8 1.2 3c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.37.24-.66.24-1.22.17-1.34-.07-.12-.27-.2-.56-.34z" />
         </svg>
     </a>
-
-    <!-- WIDGET FLOTANTE IDIOMA -->
-    <div class="lang-float-container">
-        <button class="lang-toggle-btn" aria-label="Cambiar Idioma">
-            <i class="ph ph-translate"></i>
-        </button>
-        <div class="lang-options">
-            <a href="#" class="lang-option active">ES</a>
-            <!-- Link al home en ingles ya que es un sitio single-page, o puedes personalizarlo -->
-            <a href="../en/" class="lang-option">EN</a>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="../assets/js/app.js"></script>
