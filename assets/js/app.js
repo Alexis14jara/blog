@@ -86,9 +86,23 @@ document.addEventListener("DOMContentLoaded", () => {
     let isSubmitting = false;
 
     if (contactForm && iframe && successMessage) {
-        contactForm.addEventListener("submit", () => {
+        const submitBtn = contactForm.querySelector(".submit-btn");
+        const termsCheckbox = document.getElementById("terms-checkbox");
+
+        // Control de activación del botón según la casilla de términos
+        if (termsCheckbox && submitBtn) {
+            submitBtn.disabled = !termsCheckbox.checked;
+            termsCheckbox.addEventListener("change", () => {
+                submitBtn.disabled = !termsCheckbox.checked;
+            });
+        }
+
+        contactForm.addEventListener("submit", (e) => {
+            if (termsCheckbox && !termsCheckbox.checked) {
+                e.preventDefault();
+                return false;
+            }
             isSubmitting = true;
-            const submitBtn = contactForm.querySelector(".submit-btn");
             if (submitBtn) {
                 submitBtn.textContent = "Enviando...";
                 submitBtn.style.opacity = "0.7";
@@ -105,12 +119,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Limpiar formulario
                 contactForm.reset();
 
-                // Resetear estado del botón submit
-                const submitBtn = contactForm.querySelector(".submit-btn");
+                // Resetear estado del botón submit y casilla
                 if (submitBtn) {
                     submitBtn.textContent = "Enviar Mensaje";
                     submitBtn.style.opacity = "1";
                     submitBtn.style.pointerEvents = "auto";
+                    submitBtn.disabled = termsCheckbox ? !termsCheckbox.checked : false;
                 }
 
                 isSubmitting = false;
@@ -124,6 +138,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 contactForm.style.display = "block"; // O 'grid' si fuera grid, pero form es block por defecto
                 // Animación de entrada suave para el form
                 contactForm.style.animation = "fadeIn 0.5s ease-out";
+                if (termsCheckbox && submitBtn) {
+                    termsCheckbox.checked = false;
+                    submitBtn.disabled = true;
+                }
             });
         }
     }

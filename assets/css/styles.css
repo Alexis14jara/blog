@@ -1376,6 +1376,85 @@ footer {
     min-width: 200px;
 }
 
+.submit-btn:disabled {
+    opacity: 0.35 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    filter: grayscale(0.6);
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Casilla de Aceptación de Términos y Condiciones */
+.terms-checkbox-group {
+    margin: 24px 0 10px;
+}
+
+.terms-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+    user-select: none;
+    text-align: left;
+}
+
+.terms-checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.custom-checkbox::after {
+    content: "✓";
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--bg-dark);
+    display: none;
+}
+
+.terms-checkbox-label input[type="checkbox"]:checked + .custom-checkbox {
+    background: var(--beige);
+    border-color: var(--beige);
+}
+
+.terms-checkbox-label input[type="checkbox"]:checked + .custom-checkbox::after {
+    display: block;
+}
+
+.terms-checkbox-label:hover .custom-checkbox {
+    border-color: var(--beige);
+}
+
+.terms-text a {
+    color: var(--beige);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: var(--transition);
+}
+
+.terms-text a:hover {
+    color: var(--text-white);
+}
+
 /* --- CTA INTERMEDIO --- */
 .cta-box {
     background: linear-gradient(
