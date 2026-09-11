@@ -22,15 +22,19 @@
     font-size: 0.9rem;
     color: var(--beige);
     margin-bottom: 20px;
-    display: inline-flex;
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
     align-items: center;
+    max-width: 100%;
 }
 
 .post-meta span {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
+    white-space: normal;
 }
 
 .post-title {
